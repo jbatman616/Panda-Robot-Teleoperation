@@ -1,4 +1,22 @@
-Simulation of the panda arm with Spacemouse Teleoperation
+Install Franka in folder
+copy src folder and readme from this into the top level folder of the ros directory (where src, devel and build are)
+Install the spacenav and 3dconnexion drivers to use spacemouse
+
+To run on a real arm:
+First, set up the arm and launch the controller. Make sure to run roscore if doing remotely.
+
+Launch two terminal windows, in the first run:
+roslaunch spacenav_node classic.launch
+Then, in the second window, use
+cd panda_sim
+source devel/setup.bash
+cd src/franka_ros/franka_mouse
+python3 simulate.py
+
+When the prompt appears, press n to start teleoperating, or r to run whatever path is stored in the 'run.txt' file.
+
+
+Simulation of the panda arm with Spacemouse Teleoperation (requires franka_human_friendly_controllers from here: https://github.com/franzesegiovanni/franka_human_friendly_controllers)
 Launch process:
 Requires four terminal windows. Run these commands:
 roscore
