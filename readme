@@ -8,7 +8,7 @@ First, set up the arm and launch the controller. Make sure to run roscore if doi
 Launch two terminal windows, in the first run:
 roslaunch spacenav_node classic.launch
 Then, in the second window, use
-cd panda_sim
+cd <DIRECTORY NAME>
 source devel/setup.bash
 cd src/franka_ros/franka_mouse
 python3 simulate.py
@@ -30,7 +30,7 @@ roslaunch franka_gazebo panda.launch x:=-0.5 world:=$(rospack find franka_gazebo
 to launch the Simulation
 
 Then, in the fourth window, use
-cd panda_sim
+cd <DIRECTORY NAME>
 source devel/setup.bash
 cd src/franka_ros/franka_mouse
 python3 simulate.py
