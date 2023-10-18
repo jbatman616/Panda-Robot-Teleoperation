@@ -1,0 +1,21 @@
+Simulation of the panda arm with Spacemouse Teleoperation
+Launch process:
+Requires four terminal windows. Run these commands:
+roscore
+roslaunch spacenav_node classic.launch
+
+Then cd into panda_sim and use
+source devel/setup.bash
+in both windows
+in one, use
+roslaunch franka_gazebo panda.launch x:=-0.5 world:=$(rospack find franka_gazebo)/world/stone.sdf controller:=cartesian_variable_impedance_controller rviz:=false load_gripper:=true
+to launch the Simulation
+
+Then, in the fourth window, use
+cd panda_sim
+source devel/setup.bash
+cd src/franka_ros/franka_mouse
+python3 simulate.py
+
+Kill Gazebo with
+killall -9 gazebo & killall -9 gzserver  & killall -9 gzclient
