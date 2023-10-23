@@ -1,4 +1,4 @@
-Install FrankaRos in a Ros Directory
+Install FrankaRos and libfranka in a Ros Directory
 copy src folder and readme from this into the top level folder of the ros directory (where src, devel and build are)
 Install the spacenav and 3dconnexion drivers to use spacemouse
 
