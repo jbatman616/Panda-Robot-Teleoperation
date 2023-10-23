@@ -142,7 +142,7 @@ def joystick_control():
 	inputSub = rospy.Subscriber('/spacenav/joy', Joy, control_callback)
 
 	#Open the record file
-	logFile = open("data/pickAndPlaceRuns.txt", "a")
+	logFile = open("data/pickAndPlaceRuns.txt", "a+")
 	logFile.write("Run\n")
 	logFile.close()
 	
